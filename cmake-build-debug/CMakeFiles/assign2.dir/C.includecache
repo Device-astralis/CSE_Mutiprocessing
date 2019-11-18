@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xiayutian/Desktop/CSE/assign2/pipeline.c
+pipeline.h
+/Users/xiayutian/Desktop/CSE/assign2/pipeline.h
+sys/wait.h
+-
+stdio.h
+-
+
+/Users/xiayutian/Desktop/CSE/assign2/pipeline.h
+unistd.h
+-
+
