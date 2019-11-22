@@ -364,7 +364,7 @@ static void processAllKernelSourceFiles(const subprocess_t& sp, map<string, syst
  * kKernelSourceFileFinderCommand defines the argument vector that should be invoked in a subprocess that knows how to
  * list all of the source file names, one per line, so that each can be opened and searched for SYSCALL_DEFINE macros.
  */
-static const string kKernelSourceCodeDirectory = "/usr/src/linux-source-3.13.0/linux-source-3.13.0";
+static const string kKernelSourceCodeDirectory = "/usr/src/linux-source-4.4.0/linux-source-4.4.0";
 static const char *const kKernelSourceFileFinderCommand[] = {"find", kKernelSourceCodeDirectory.c_str(), "-name", "*.c", "-print", NULL};
 static void collectSystemCallSignatures(map<string, systemCallSignature>& systemCallSignatures, const map<string, int>& systemCallNames, bool rebuild) {
   if (!rebuild && loadSignaturesFromCache(systemCallSignatures)) return;

@@ -30,10 +30,10 @@ self_halting = len(sys.argv) > 1 and sys.argv[1] == '--self-halting'
 pid = os.getpid()
 while True:
     if self_halting: os.kill(pid, signal.SIGSTOP)
-    try: num = int(raw_input()) 
+    try: num = int(input())
     except EOFError: break;
     start = time.time()
     response = factorization(num)
     stop = time.time()
-    print '%s [pid: %d, time: %g seconds]' % (response, pid, stop - start)
+    print ("%s [pid: %d, time: %g seconds]" % (response, pid, stop - start))
     
