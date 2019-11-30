@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys, os, signal, math, time
 
 # This line is equivalent to the C syscall: prctl(PR_SET_PDEATHSIG, SIGKILL);
@@ -8,7 +8,7 @@ import ctypes; ctypes.CDLL(None).prctl(1, 9)
 
 def isPrime(num):
     if num <= 1: return False
-    for factor in xrange(2, int(math.sqrt(num)) + 1):
+    for factor in range(2, int(math.sqrt(num)) + 1):
         if num % factor == 0: return False
     return True
 
@@ -18,7 +18,7 @@ def factorization(num):
 
     factors = []
     original = num
-    for factor in xrange(2, num):
+    for factor in range(2, num):
         while num % factor == 0:
             factors.append(factor)
             num = num / factor
